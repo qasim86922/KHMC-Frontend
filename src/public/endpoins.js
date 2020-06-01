@@ -1,5 +1,13 @@
-const baseUrl = 'http://localhost:8080/api';
-export const socketUrl = 'ws://localhost:8080';
+let baseUrl = 'http://localhost:8080/api';
+let socketurl = '//localhost:8080/';
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  baseUrl = 'http://localhost:8080/api';
+  socketurl = '//localhost:8080/';
+} else {
+  baseUrl = 'https://testkmch.herokuapp.com/api';
+  socketurl = '//testkmch.herokuapp.com';
+}
+export const socketUrl = `ws:${socketurl}`;
 
 // auth endpoints
 export const loginUrl = `${baseUrl}/auth/login`;
