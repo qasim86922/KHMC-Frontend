@@ -55,7 +55,8 @@ const tableStyle = theme => ({
     padding: '12px 8px',
     verticalAlign: 'middle',
     fontSize: '0.8125rem',
-    border: '2px solid rgb(165, 165, 165)',
+    border: '1px solid rgb(165, 165, 165)',
+
     textAlign:"center"
   },
   tableResponsive: {
@@ -69,7 +70,7 @@ const tableStyle = theme => ({
     display: 'table-row',
     outline: 'none',
     verticalAlign: 'middle',
-    backgroundColor: '#e2e2e2'
+    // backgroundColor: '#2873CF'
   },
   tableBodyRow: {
     height: '48px',

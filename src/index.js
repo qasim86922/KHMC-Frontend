@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* Material Dashboard React - v1.8.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
@@ -30,7 +14,24 @@ import cookie from 'react-cookies';
 import { ToastsContainer, ToastsStore } from 'react-toasts';
 import * as serviceWorker from './serviceWorker';
 import Login from './layouts/Login';
+
+import ForgetPassword from './layouts/ForgetPassword';
+
+import ResetPasswordStatus from './layouts/ResetPasswordStatus';
+
+import HomeScreen from '../src/views/Home/HomeScreen';
+import ControlRoom from '../src/views/Home/ControlRoom';
+import WMS from '../src/views/Home/WMS';
+
+
+import BusinessUnit from '../src/views/BusinessUnit/BusinessUnit';
+
+import AddBusinessUnit from '../src/views/BusinessUnit/AddBusinessUnit';
+
+import SuccessScreen from '../src/views/BusinessUnit/SuccessScreen';
+
 import configureStore, { history } from './store';
+// import BusinessUnit from 'subRoutes/business_unit';
 
 export const { persistor, store } = configureStore();
 
@@ -65,9 +66,9 @@ function interceptor() {
       const currentUser = cookie.load('current_user') || '';
       console.log('token: ', token);
       // Do something before request is sent
-      if(token) {
+      if (token) {
         config.headers.Authorization = `Bearer ${token}`;
-        if(currentUser && currentUser.staffTypeId){
+        if (currentUser && currentUser.staffTypeId) {
           config.headers.role = currentUser.staffTypeId.type;
         }
       }
@@ -83,10 +84,9 @@ function interceptor() {
       return response;
     },
     function(error) {
-      if(error.response){
+      if (error.response) {
         console.log('error: ', error.response.data);
-      }
-      else{
+      } else {
         console.log('error: ', error);
       }
       return error;
@@ -109,9 +109,38 @@ const MainApp = () => {
 
             {/* <SecuredRoute path="/admin" component={Admin} /> */}
             {/* <SecuredRoute exact path="/login" component={Login} /> */}
-            <SecuredRoute path="/admin" component={Admin} />
+            
+            {/* <SecuredRoute path="/admin" component={Admin} /> */}
+            
+            {/* <SecuredRoute path="/home" component={HomeScreen} /> */}
+
             <Route path="/login" component={Login} />
+
             <Route exact path="/" component={Login} />
+            <Route exact path="/forgetpassword" component={ForgetPassword} />
+
+            <Route
+              exact
+              path="/emailsendstatus"
+              component={ResetPasswordStatus}
+            />
+
+            <Route path="/bus" component={BusinessUnit} />
+
+            <Route path="/businessunit/next/add" component={AddBusinessUnit} />
+            <Route path="/businessunit/next/edit" component={AddBusinessUnit} />
+
+            <Route
+              path="/bus/next/success"
+              component={SuccessScreen}
+            />
+
+            <Route exact path="/home" component={HomeScreen} />
+            <Route path="/home/controlroom" component={ControlRoom} />
+            <Route path="/home/controlroom/wms" component={WMS} />
+
+
+
             {/* <Route path="*" component={NotFound} /> */}
 
             {/* <SecuredRoute path="/" component={Login} /> */}

@@ -6,6 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
+
+import Box from '@material-ui/core/Box';
+
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
@@ -16,6 +19,8 @@ import styles from 'assets/jss/material-dashboard-react/components/tableStyle.js
 import TablePagination from '@material-ui/core/TablePagination';
 import RcIf from 'rc-if';
 import { dateOptions } from '../../variables/public';
+
+import Active from '../../assets/img/Active.png';
 
 const useStyles = makeStyles(styles);
 
@@ -34,6 +39,7 @@ export default function CustomTable(props) {
     if (val === 'in_active') {
       return 'In Active';
     } else if (val === 'active') {
+      // return <img src={Active} style={{ width: '100%', height: '100%' }} />;
       return 'Active';
     }
 
@@ -66,14 +72,26 @@ export default function CustomTable(props) {
 
   return (
     <div className={classes.tableResponsive}>
-      <Table className={classes.table}>
+      <Table>
         {tableHeading !== undefined ? (
-          <TableHead className={classes[tableHeaderColor + 'TableHeader']}>
+          <TableHead
+            className={classes[tableHeaderColor + 'TableHeader']}
+            style={{
+              backgroundColor: '#2873cf'
+            }}
+          >
             <TableRow className={classes.tableHeadRow}>
               {tableHeading.map((prop, key) => {
                 return (
                   <TableCell
-                    className={classes.tableCell + ' ' + classes.tableHeadCell}
+                    className={classes.tableHeadCell}
+                    style={{
+                      color: 'white',
+                      fontFamily: 'Ubuntu',
+                      fontWeight: '700',
+                      paddingTop: 20,
+                      paddingBottom: 20
+                    }}
                     key={key}
                   >
                     {prop}
@@ -83,13 +101,23 @@ export default function CustomTable(props) {
             </TableRow>
           </TableHead>
         ) : null}
-        <TableBody>
+
+        <div style={{ height: 20, width: '100%' }}></div>
+
+        <TableBody style={{ marginTop: 20 }}>
           {tableData &&
             tableData
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((prop, index) => {
                 return (
-                  <TableRow key={index} className={classes.tableBodyRow}>
+                  <TableRow
+                    key={index}
+                    className={classes.tableBodyRow}
+                    style={{
+                      backgroundColor: 'white',
+                      
+                    }}
+                  >
                     {tableDataKeys
                       ? tableDataKeys.map((val, key) => {
                           if (val === 'date') {
