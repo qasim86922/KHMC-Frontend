@@ -264,8 +264,6 @@ export default function Items(props) {
         )}
       </div>
 
-
-
       <ConfirmationModal
         modalVisible={modalVisible}
         msg="Are you sure want to in active the record?"
