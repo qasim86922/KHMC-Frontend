@@ -178,7 +178,7 @@ function AddBusinessUnit(props) {
         .then(res => {
           if (res.data.success) {
             // props.history.goBack();
-            props.history.push('/bus/next/success');
+            props.history.push('/bus/success');
 
           } else if (!res.data.success) {
             ToastsStore.error(res.data.error);
@@ -509,7 +509,7 @@ function AddBusinessUnit(props) {
           >
             {comingFor === 'add' ? (
               <Button
-                style={{ paddingLeft: 30, paddingRight: 30 }}
+                style={{ width:'60%'  }}
                 disabled={!validateForm()}
                 onClick={handleAdd}
                 variant="contained"
@@ -519,7 +519,7 @@ function AddBusinessUnit(props) {
               </Button>
             ) : (
               <Button
-                style={{ paddingLeft: 30, paddingRight: 30, width:'60%' }}
+                style={{  width:'60%' }}
                 disabled={!validateForm()}
                 onClick={handleEdit}
                 variant="contained"

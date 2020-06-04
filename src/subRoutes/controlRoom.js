@@ -20,12 +20,13 @@ class ControlRoomRoutes extends React.PureComponent {
         <Route exact path={`${this.props.match.url}/wms`} component={WMS} />
       
         <Route
-          exact
+          
           path={`${this.props.match.url}/wms/bus`}
           component={BusinessUnitRoutes}
         />
 
         <Route
+        
           path={`${this.props.match.url}/wms/fus`}
           component={FunctionalUnitRoutes}
         />

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import NotFound from '../components/NotFound/NotFound';
 import AddBusinessUnit from '../views/BusinessUnit/AddBusinessUnit';
 
-import SuccessScreen from '../views/BusinessUnit/SuccessScreen';
+import SuccessScreen from '../components/SuccessScreen/SuccessScreen';
 
 import BusinessUnit from '../views/BusinessUnit/BusinessUnit';
 
@@ -18,7 +18,7 @@ class BusinessUnitRoutes extends React.PureComponent {
         />
 
         <Route
-
+          
           path={`${this.props.match.url}/add`}
           component={AddBusinessUnit}
         />

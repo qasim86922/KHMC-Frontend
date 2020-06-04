@@ -24,7 +24,6 @@ import BusinessUnit from '../src/views/BusinessUnit/BusinessUnit';
 
 import AddBusinessUnit from '../src/views/BusinessUnit/AddBusinessUnit';
 
-import SuccessScreen from '../src/views/BusinessUnit/SuccessScreen';
 
 import configureStore, { history } from './store';
 

@@ -79,7 +79,6 @@ export default function Items(props) {
   }, []);
 
   const addNewItem = () => {
-    console.log('pressed');
     let path = `bus/add`;
     props.history.push({
       pathname: path,

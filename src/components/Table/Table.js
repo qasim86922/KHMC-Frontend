@@ -21,6 +21,8 @@ import RcIf from 'rc-if';
 import { dateOptions } from '../../variables/public';
 
 import Active from '../../assets/img/Active.png';
+import In_Active from '../../assets/img/Inactive.png';
+
 
 const useStyles = makeStyles(styles);
 
@@ -37,10 +39,11 @@ export default function CustomTable(props) {
 
   const replaceSlugToTitle = val => {
     if (val === 'in_active') {
-      return 'In Active';
+      // return 'In Active';
+     return <img src={In_Active} style={{width:80, height:35}}/>
     } else if (val === 'active') {
-      // return <img src={Active} style={{ width: '100%', height: '100%' }} />;
-      return 'Active';
+      // return "Active";
+      return <img src={Active} style={{width:80, height:35}}/>
     }
 
     return val;
@@ -154,7 +157,9 @@ export default function CustomTable(props) {
                                       'en-US',
                                       dateOptions
                                     ).format(Date.parse(prop[val]))
-                                  : `${replaceSlugToTitle(prop[val])}`}
+                                  // : `${replaceSlugToTitle(prop[val])}`}
+                                  : replaceSlugToTitle(prop[val])}
+
                               </TableCell>
                             );
                           }
