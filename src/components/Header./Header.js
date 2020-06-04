@@ -1,23 +1,8 @@
 import React from 'react';
 
-import TextField from '@material-ui/core/TextField';
-
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-
-import Snackbar from 'components/Snackbar/Snackbar';
-import Notification from 'components/Snackbar/Notification.js';
-
-import AddAlert from '@material-ui/icons/AddAlert';
-
-import { Redirect } from 'react-router-dom';
-import axios from 'axios';
-import cookie from 'react-cookies';
-
 import KHMC_White from '../../assets/img/KHMC_White.png';
 
 import Influence_white from '../../assets/img/Influence_white.png';
-
 
 class Header extends React.PureComponent {
   render() {
@@ -28,7 +13,7 @@ class Header extends React.PureComponent {
           flexDirection: 'column',
           flex: 1,
           // position: 'fixed',
-          width: '100%',
+          width: '100%'
           // height: '100%',
           // backgroundColor: '#0154E8'
         }}

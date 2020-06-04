@@ -5,8 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 
-import Snackbar from 'components/Snackbar/Snackbar';
-import Notification from 'components/Snackbar/Notification.js';
+// import Notification from 'components/Snackbar/Notification.js';
 
 import AddAlert from '@material-ui/icons/AddAlert';
 
@@ -176,7 +175,7 @@ class Login extends React.Component {
           }}
         >
           <div style={{ marginLeft: '1%', marginRight: '1%' }}>
-            <Notification msg={this.state.msg} open={this.state.tr} />
+            {/* <Notification msg={this.state.msg} open={this.state.tr} /> */}
 
             <div className="container">
               <div

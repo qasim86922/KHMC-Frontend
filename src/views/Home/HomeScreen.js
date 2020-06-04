@@ -426,35 +426,37 @@ class HomeScreen extends React.Component {
             <section>
               <div
                 className="mainmenu circle lightBlue"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', display:"flex", justifyContent:"center", alignItems:"center" }}
                 onClick={() => this.setState({ openApps: false })}
               >
-                <h4
+                <h5
                   style={{
                     position: 'absolute',
                     color: 'white',
-                    fontWeight: '500'
+                  fontFamily: 'Ubuntu',
+                  fontWeight: '500', 
                   }}
                 >
                   KHMC
-                </h4>
-                <p style={{ position: 'absolute', top: 60 }}>Apps</p>
+                </h5>
+                <p style={{ position: 'absolute', top: 60,fontWeight:'500', fontFamily:'Ubuntu' }}>Apps</p>
               </div>
 
               <div
                 className="submenu circle orange"
                 style={{ cursor: 'pointer' }}
               >
-                <h4
+                <h5
                   style={{
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                    fontWeight: '500'
+                  fontFamily: 'Ubuntu',
+                  fontWeight: '500',
                   }}
                 >
                   RCM
-                </h4>
+                </h5>
                 <img
                   src={RCM}
                   style={{
@@ -478,19 +480,20 @@ class HomeScreen extends React.Component {
               <div
                 className="submenu4 circle lightBlue"
                 style={{ cursor: 'pointer' }}
-                onClick={() => this.props.history.push('home/controlroom')}
+                onClick={() => this.props.history.push('/home/controlroom')}
               >
-                <h4
+                <h5
                   style={{
                     position: 'absolute',
                     top: 10,
                     color: 'white',
                     fontWeight: '500',
-                    textAlign: 'center'
+                  fontFamily: 'Ubuntu',
+                  textAlign: 'center',
                   }}
                 >
                   Control Room
-                </h4>
+                </h5>
                 <img
                   src={Control_Room}
                   style={{
@@ -507,16 +510,17 @@ class HomeScreen extends React.Component {
                 className="submenu5 circle yellow"
                 style={{ cursor: 'pointer' }}
               >
-                <h4
+                <h5
                   style={{
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                    fontWeight: '500'
+                  fontFamily: 'Ubuntu',
+                  fontWeight: '500',
                   }}
                 >
                   FIN
-                </h4>
+                </h5>
                 <img
                   src={FIN}
                   style={{
@@ -533,16 +537,17 @@ class HomeScreen extends React.Component {
                 className="submenu6 circle gray"
                 style={{ cursor: 'pointer' }}
               >
-                <h4
+                <h5
                   style={{
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                    fontWeight: '500'
+                  fontFamily: 'Ubuntu',
+                  fontWeight: '500',
                   }}
                 >
                   WMS
-                </h4>
+                </h5>
                 <img
                   src={WMS}
                   style={{

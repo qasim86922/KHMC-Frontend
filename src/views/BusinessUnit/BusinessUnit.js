@@ -1,8 +1,7 @@
 /*eslint-disable*/
 import React, { useState, useEffect } from 'react';
 // core components
-import GridItem from 'components/Grid/GridItem.js';
-import GridContainer from 'components/Grid/GridContainer.js';
+
 import Button from '@material-ui/core/Button';
 import Table from '../../components/Table/Table.js';
 import ConfirmationModal from '../../components/Modal/confirmationModal';
@@ -81,7 +80,7 @@ export default function Items(props) {
 
   const addNewItem = () => {
     console.log('pressed');
-    let path = `businessunit/next/add`;
+    let path = `bus/add`;
     props.history.push({
       pathname: path,
       state: {
@@ -94,7 +93,7 @@ export default function Items(props) {
   };
 
   function handleEdit(rec) {
-    let path = `businessunit/next/edit`;
+    let path = `bus/edit`;
     props.history.push({
       pathname: path,
       state: {
@@ -190,19 +189,6 @@ export default function Items(props) {
         overflowY: 'scroll'
       }}
     >
-      {/* <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <Button
-              onClick={addNewItem}
-              style={{ width: 65, height: 65, borderRadius: 65 / 2 }}
-              variant="contained"
-              color="primary"
-            >
-              <i className="zmdi zmdi-plus zmdi-hc-3x"></i>
-            </Button>
-          </div>
-        </div> */}
-
       <div style={{ alignItems: 'center', flex: 1, display: 'flex' }}>
         <Header />
       </div>
@@ -252,7 +238,7 @@ export default function Items(props) {
         </div>
       </div>
 
-      {/* <div
+      <div
         style={{
           flex: 4,
           display: 'flex',
@@ -271,11 +257,13 @@ export default function Items(props) {
             action={actions}
             handleEdit={handleEdit}
             handleStatus={handleStatus}
+            borderBottomColor={'#60d69f'}
+            borderBottomWidth={20}
           />
         ) : (
           undefined
         )}
-      </div> */}
+      </div>
 
       {/* <ConfirmationModal
         modalVisible={modalVisible}
@@ -293,17 +281,15 @@ export default function Items(props) {
         setdeleteItem={() => setdeleteItem('')}
       />
 
-      <div
+      {/* <div
         style={{
           height: 60,
           display: 'flex',
-          // flex: 0.5,
           backgroundColor: 'blue',
           borderRadius: 15,
           marginLeft: '2%',
           marginRight: '2%',
-          // justifyContent: 'center',
-          // alignItems: 'center'
+         
         }}
       >
         {tableHeading.map((prop, key) => {
@@ -450,7 +436,7 @@ export default function Items(props) {
         ) : (
           <h3>Not found</h3>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

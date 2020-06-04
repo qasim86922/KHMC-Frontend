@@ -1,11 +1,8 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 import { Router, Route, Redirect } from 'react-router-dom';
 // core components
-import Admin from 'layouts/Admin.js';
-import 'assets/css/material-dashboard-react.css?v=1.8.0';
 import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -23,7 +20,6 @@ import HomeScreen from '../src/views/Home/HomeScreen';
 import ControlRoom from '../src/views/Home/ControlRoom';
 import WMS from '../src/views/Home/WMS';
 
-
 import BusinessUnit from '../src/views/BusinessUnit/BusinessUnit';
 
 import AddBusinessUnit from '../src/views/BusinessUnit/AddBusinessUnit';
@@ -31,11 +27,16 @@ import AddBusinessUnit from '../src/views/BusinessUnit/AddBusinessUnit';
 import SuccessScreen from '../src/views/BusinessUnit/SuccessScreen';
 
 import configureStore, { history } from './store';
-// import BusinessUnit from 'subRoutes/business_unit';
+
+import BusinessUnitRoutes from '../src/subRoutes/business_unit';
+
+import HomeRoutes from '../src/subRoutes/home';
+
 
 export const { persistor, store } = configureStore();
 
 const hist = createBrowserHistory();
+
 function SecuredRoute(props) {
   const { component: Component, path } = props;
   return (
@@ -109,10 +110,10 @@ const MainApp = () => {
 
             {/* <SecuredRoute path="/admin" component={Admin} /> */}
             {/* <SecuredRoute exact path="/login" component={Login} /> */}
-            
+
             {/* <SecuredRoute path="/admin" component={Admin} /> */}
-            
-            {/* <SecuredRoute path="/home" component={HomeScreen} /> */}
+
+            <SecuredRoute exact path="/home" component={HomeRoutes} />
 
             <Route path="/login" component={Login} />
 
@@ -124,22 +125,22 @@ const MainApp = () => {
               path="/emailsendstatus"
               component={ResetPasswordStatus}
             />
+            {/* <Route  path="/home/controlroom" component={ControlRoom} /> */}
 
-            <Route path="/bus" component={BusinessUnit} />
 
+            {/* <Route path="/home/controlroom/wms/bus" component={BusinessUnit} /> */}
+
+            {/* <Route exact path="/home/controlroom/wms" component={WMS} /> */}
+
+            {/* 
             <Route path="/businessunit/next/add" component={AddBusinessUnit} />
             <Route path="/businessunit/next/edit" component={AddBusinessUnit} />
-
             <Route
               path="/bus/next/success"
               component={SuccessScreen}
-            />
+            /> */}
 
-            <Route exact path="/home" component={HomeScreen} />
-            <Route path="/home/controlroom" component={ControlRoom} />
-            <Route path="/home/controlroom/wms" component={WMS} />
-
-
+            {/* <Route exact path="/home" component={HomeScreen} /> */}
 
             {/* <Route path="*" component={NotFound} /> */}
 

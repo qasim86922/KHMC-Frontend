@@ -1,36 +1,26 @@
-import {
-  warningColor,
-  primaryColor,
-  dangerColor,
-  successColor,
-  infoColor,
-  roseColor,
-  grayColor,
-  defaultFont
-} from 'assets/jss/material-dashboard-react.js';
 
 const tableStyle = theme => ({
-  warningTableHeader: {
-    color: warningColor[0]
-  },
-  primaryTableHeader: {
-    color: primaryColor[0]
-  },
-  dangerTableHeader: {
-    color: dangerColor[0]
-  },
-  successTableHeader: {
-    color: successColor[0]
-  },
-  infoTableHeader: {
-    color: infoColor[0]
-  },
-  roseTableHeader: {
-    color: roseColor[0]
-  },
-  grayTableHeader: {
-    color: grayColor[0]
-  },
+  // warningTableHeader: {
+  //   color: warningColor[0]
+  // },
+  // primaryTableHeader: {
+  //   color: primaryColor[0]
+  // },
+  // dangerTableHeader: {
+  //   color: dangerColor[0]
+  // },
+  // successTableHeader: {
+  //   color: successColor[0]
+  // },
+  // infoTableHeader: {
+  //   color: infoColor[0]
+  // },
+  // roseTableHeader: {
+  //   color: roseColor[0]
+  // },
+  // grayTableHeader: {
+  //   color: grayColor[0]
+  // },
   table: {
     marginBottom: '0',
     width: '100%',
@@ -42,7 +32,7 @@ const tableStyle = theme => ({
   },
   tableHeadCell: {
     // color: "inherit",
-    ...defaultFont,
+    // ...defaultFont,
     '&, &$tableCell': {
       fontSize: '1em',
       fontWeight: '400'
@@ -50,7 +40,7 @@ const tableStyle = theme => ({
     textAlign: 'center'
   },
   tableCell: {
-    ...defaultFont,
+    // ...defaultFont,
     lineHeight: '1.42857143',
     padding: '12px 8px',
     verticalAlign: 'middle',

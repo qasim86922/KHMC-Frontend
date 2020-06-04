@@ -114,8 +114,7 @@ export default function CustomTable(props) {
                     key={index}
                     className={classes.tableBodyRow}
                     style={{
-                      backgroundColor: 'white',
-                      
+                      backgroundColor: 'white'
                     }}
                   >
                     {tableDataKeys
@@ -138,7 +137,12 @@ export default function CustomTable(props) {
                                 style={{
                                   cursor: props.handleModelMaterialReceiving
                                     ? 'pointer'
-                                    : ''
+                                    : '',
+                                  borderBottomWidth: props.borderBottomWidth,
+                                  borderBottomColor: props.borderBottomColor,
+                                  borderLeftWidth: 0,
+                                  borderRightWidth: 0,
+                                  borderTopWidth: 0
                                 }}
                               >
                                 {Array.isArray(val)
@@ -158,7 +162,12 @@ export default function CustomTable(props) {
                       : null}
                     <TableCell
                       style={{
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        borderBottomWidth: props.borderBottomWidth,
+                        borderBottomColor: props.borderBottomColor,
+                        borderLeftWidth: 0,
+                        borderRightWidth: 0,
+                        borderTopWidth: 0
                       }}
                       className={classes.tableCell}
                       colSpan="2"
