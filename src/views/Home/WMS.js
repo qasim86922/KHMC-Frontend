@@ -76,8 +76,8 @@ class HomeScreen extends React.Component {
                     top: 20,
                     color: 'white',
                     fontWeight: '500',
-                  fontFamily: 'Ubuntu',
-                  textAlign: 'center',
+                    fontFamily: 'Ubuntu',
+                    textAlign: 'center'
                   }}
                 >
                   WMS
@@ -97,14 +97,17 @@ class HomeScreen extends React.Component {
               <div
                 className="submenu circle orange"
                 style={{ cursor: 'pointer' }}
-                onClick={() => this.props.history.push('/home/controlroom/wms/bus')}
+                onClick={() =>
+                  this.props.history.push('/home/controlroom/wms/bus')
+                }
               >
                 <h5
                   style={{
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                    fontWeight: '500', fontFamily:"Ubuntu"
+                    fontWeight: '500',
+                    fontFamily: 'Ubuntu'
                   }}
                 >
                   BU Mgmt
@@ -161,6 +164,9 @@ class HomeScreen extends React.Component {
               <div
                 className="submenu5 circle yellow"
                 style={{ cursor: 'pointer', textAlign: 'center' }}
+                onClick={() =>
+                  this.props.history.push('/home/controlroom/wms/vendor')
+                }
               >
                 <h5
                   style={{
@@ -189,8 +195,9 @@ class HomeScreen extends React.Component {
               <div
                 className="submenu6 circle gray"
                 style={{ cursor: 'pointer' }}
-                onClick={() => this.props.history.push('/home/controlroom/wms/fus')}
-
+                onClick={() =>
+                  this.props.history.push('/home/controlroom/wms/fus')
+                }
               >
                 <h5
                   style={{
