@@ -13,7 +13,7 @@ import {
   updateBusinessUnitUrl
 } from '../../public/endpoins';
 
-import Header from '../../components/Header./Header';
+import Header from '../../components/Header/Header';
 
 import Add_New from '../../assets/img/Add_New.png';
 import business_Unit from '../../assets/img/business_Unit.png';
@@ -265,13 +265,7 @@ export default function Items(props) {
         )}
       </div>
 
-      {/* <ConfirmationModal
-        modalVisible={modalVisible}
-        msg="Are you sure want to delete the record?"
-        hideconfirmationModal={() => setModalVisible(false)}
-        onConfirmDelete={() => deleteBusinessUnit()}
-        setdeleteItem={() => setdeleteItem('')}
-      /> */}
+
 
       <ConfirmationModal
         modalVisible={modalVisible}

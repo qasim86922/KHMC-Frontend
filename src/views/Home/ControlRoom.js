@@ -14,7 +14,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import cookie from 'react-cookies';
 
-import Header from '../../components/Header./Header';
+import Header from '../../components/Header/Header';
 
 import RCM from '../../assets/img/RCM.png';
 import WMS from '../../assets/img/WMS.png';

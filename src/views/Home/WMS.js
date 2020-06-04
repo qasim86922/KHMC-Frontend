@@ -14,7 +14,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import cookie from 'react-cookies';
 
-import Header from '../../components/Header./Header';
+import Header from '../../components/Header/Header';
 
 import RCM from '../../assets/img/business_Unit.png';
 import WMS from '../../assets/img/WMS.png';
@@ -189,6 +189,8 @@ class HomeScreen extends React.Component {
               <div
                 className="submenu6 circle gray"
                 style={{ cursor: 'pointer' }}
+                onClick={() => this.props.history.push('/home/controlroom/wms/fus')}
+
               >
                 <h5
                   style={{

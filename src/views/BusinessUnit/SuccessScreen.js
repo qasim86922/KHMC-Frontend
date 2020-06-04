@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import { ToastsStore } from 'react-toasts';
 
-import Header from '../../components/Header./Header';
+import Header from '../../components/Header/Header';
 
 import Back from '../../assets/img/Back.png';
 import Home from '../../assets/img/Home.png';

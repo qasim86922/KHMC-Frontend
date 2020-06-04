@@ -24,7 +24,7 @@ import {
   getBusinessUnitLogsUrl
 } from '../../public/endpoins';
 
-import Header from '../../components/Header./Header';
+import Header from '../../components/Header/Header';
 
 import Add_New from '../../assets/img/Add_New.png';
 import business_Unit from '../../assets/img/business_Unit.png';

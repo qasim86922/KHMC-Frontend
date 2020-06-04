@@ -10,6 +10,7 @@ import ControlRoom from '../views/Home/ControlRoom';
 import WMS from '../views/Home/WMS';
 
 import BusinessUnitRoutes from '../subRoutes/business_unit';
+import FunctionalUnitRoutes from '../subRoutes/FunctionalUnitRoutes';
 
 class ControlRoomRoutes extends React.PureComponent {
   render() {
@@ -17,10 +18,18 @@ class ControlRoomRoutes extends React.PureComponent {
       <Switch>
         <Route exact path={`${this.props.match.url}`} component={ControlRoom} />
         <Route exact path={`${this.props.match.url}/wms`} component={WMS} />
+      
         <Route
+          exact
           path={`${this.props.match.url}/wms/bus`}
           component={BusinessUnitRoutes}
         />
+
+        <Route
+          path={`${this.props.match.url}/wms/fus`}
+          component={FunctionalUnitRoutes}
+        />
+
         <Route path="*" component={NotFound} />
       </Switch>
     );
