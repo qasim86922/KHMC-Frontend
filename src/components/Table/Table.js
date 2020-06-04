@@ -23,7 +23,6 @@ import { dateOptions } from '../../variables/public';
 import Active from '../../assets/img/Active.png';
 import In_Active from '../../assets/img/Inactive.png';
 
-
 const useStyles = makeStyles(styles);
 
 export default function CustomTable(props) {
@@ -40,10 +39,10 @@ export default function CustomTable(props) {
   const replaceSlugToTitle = val => {
     if (val === 'in_active') {
       // return 'In Active';
-     return <img src={In_Active} style={{width:80, height:35}}/>
+      return <img src={In_Active} style={{ width: 80, height: 35 }} />;
     } else if (val === 'active') {
       // return "Active";
-      return <img src={Active} style={{width:80, height:35}}/>
+      return <img src={Active} style={{ width: 80, height: 35 }} />;
     }
 
     return val;
@@ -127,6 +126,13 @@ export default function CustomTable(props) {
                               <TableCell
                                 className={classes.tableCell}
                                 key={key}
+                                style={{
+                                  borderBottomWidth: props.borderBottomWidth,
+                                  borderBottomColor: props.borderBottomColor,
+                                  borderLeftWidth: 0,
+                                  borderRightWidth: 0,
+                                  borderTopWidth: 0
+                                }}
                               >
                                 {formatDate(prop[val])}
                               </TableCell>
@@ -157,9 +163,8 @@ export default function CustomTable(props) {
                                       'en-US',
                                       dateOptions
                                     ).format(Date.parse(prop[val]))
-                                  // : `${replaceSlugToTitle(prop[val])}`}
-                                  : replaceSlugToTitle(prop[val])}
-
+                                  : // : `${replaceSlugToTitle(prop[val])}`}
+                                    replaceSlugToTitle(prop[val])}
                               </TableCell>
                             );
                           }
@@ -178,7 +183,7 @@ export default function CustomTable(props) {
                       colSpan="2"
                     >
                       {props.action ? (
-                        <>
+                        <div style={{display:"flex", justifyContent:'space-evenly'}}>
                           <RcIf if={props.action.edit}>
                             <span onClick={() => props.handleEdit(prop)}>
                               <i className="zmdi zmdi-edit zmdi-hc-2x" />
@@ -201,7 +206,7 @@ export default function CustomTable(props) {
                               <i className=" ml-10 zmdi zmdi-check zmdi-hc-2x" />
                             </span>
                           </RcIf>
-                        </>
+                        </div>
                       ) : null}
                     </TableCell>
                   </TableRow>

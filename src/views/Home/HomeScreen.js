@@ -426,20 +426,34 @@ class HomeScreen extends React.Component {
             <section>
               <div
                 className="mainmenu circle lightBlue"
-                style={{ cursor: 'pointer', display:"flex", justifyContent:"center", alignItems:"center" }}
+                style={{
+                  cursor: 'pointer',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
                 onClick={() => this.setState({ openApps: false })}
               >
                 <h5
                   style={{
                     position: 'absolute',
                     color: 'white',
-                  fontFamily: 'Ubuntu',
-                  fontWeight: '500', 
+                    fontFamily: 'Ubuntu',
+                    fontWeight: '500'
                   }}
                 >
                   KHMC
                 </h5>
-                <p style={{ position: 'absolute', top: 60,fontWeight:'500', fontFamily:'Ubuntu' }}>Apps</p>
+                <p
+                  style={{
+                    position: 'absolute',
+                    top: 60,
+                    fontWeight: '500',
+                    fontFamily: 'Ubuntu'
+                  }}
+                >
+                  Apps
+                </p>
               </div>
 
               <div
@@ -451,8 +465,8 @@ class HomeScreen extends React.Component {
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                  fontFamily: 'Ubuntu',
-                  fontWeight: '500',
+                    fontFamily: 'Ubuntu',
+                    fontWeight: '500'
                   }}
                 >
                   RCM
@@ -469,11 +483,21 @@ class HomeScreen extends React.Component {
                 />{' '}
               </div>
 
-              <div className="submenu1 circle gray">
-                <h4></h4>
+              <div
+                className="submenu1 circle gray"
+                style={{ cursor: 'pointer' }}
+                onClick={() => this.props.history.push('/home/pr')}
+              >
+                <h5 style={{ textAlign: 'center' }}>Purchase Request</h5>
               </div>
 
-              <div className="submenu2 circle orange"></div>
+              <div
+                className="submenu2 circle orange"
+                style={{ cursor: 'pointer' }}
+                onClick={() => this.props.history.push('/home/po')}
+              >
+                <h5 style={{ textAlign: 'center' }}>Purchase Order</h5>
+              </div>
 
               <div className="submenu3 circle green"></div>
 
@@ -488,8 +512,8 @@ class HomeScreen extends React.Component {
                     top: 10,
                     color: 'white',
                     fontWeight: '500',
-                  fontFamily: 'Ubuntu',
-                  textAlign: 'center',
+                    fontFamily: 'Ubuntu',
+                    textAlign: 'center'
                   }}
                 >
                   Control Room
@@ -515,8 +539,8 @@ class HomeScreen extends React.Component {
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                  fontFamily: 'Ubuntu',
-                  fontWeight: '500',
+                    fontFamily: 'Ubuntu',
+                    fontWeight: '500'
                   }}
                 >
                   FIN
@@ -542,8 +566,8 @@ class HomeScreen extends React.Component {
                     position: 'absolute',
                     top: 20,
                     color: 'white',
-                  fontFamily: 'Ubuntu',
-                  fontWeight: '500',
+                    fontFamily: 'Ubuntu',
+                    fontWeight: '500'
                   }}
                 >
                   WMS

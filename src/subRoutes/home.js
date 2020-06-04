@@ -11,8 +11,16 @@ import WMS from '../views/Home/WMS';
 
 import BusinessUnitRoutes from '../subRoutes/business_unit';
 
+import ControlRoomRoutes from '../subRoutes/controlRoom';
 
-import ControlRoomRoutes from '../subRoutes/controlRoom'
+import PurchaseRequest from '../views/PurchaseRequest/purchaseRequest';
+import AddEditPurchaseRequest from '../views/PurchaseRequest/addEditPurchaseRequest';
+
+
+
+import PurchaseOrders from '../views/PurchaseOrders/purchaseOrder';
+import AddEditPurchaseOrders from '../views/PurchaseOrders/addEditPurchaseOrders';
+
 
 const hist = createBrowserHistory();
 
@@ -22,7 +30,17 @@ class HomeScreenRoutes extends React.PureComponent {
       <Switch>
         <Route exact path={'/home'} component={HomeScreen} />
 
-        <Route  path={'/home/controlroom'} component={ControlRoomRoutes} />
+        <Route path={'/home/controlroom'} component={ControlRoomRoutes} />
+
+        <Route exact path={'/home/pr'} component={PurchaseRequest} />
+        <Route path={'/home/pr/add'} component={AddEditPurchaseRequest} />
+        <Route path={'/home/pr/edit'} component={AddEditPurchaseRequest} />
+
+
+
+        <Route exact path={'/home/po'} component={PurchaseOrders} />
+        <Route path={'/home/po/add'} component={AddEditPurchaseOrders} />
+        <Route path={'/home/po/edit'} component={AddEditPurchaseOrders} />
 
         {/* <Route exact path={'/home/controlroom/wms'} component={WMS} />
 

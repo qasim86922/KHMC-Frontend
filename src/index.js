@@ -16,18 +16,12 @@ import ForgetPassword from './layouts/ForgetPassword';
 
 import ResetPasswordStatus from './layouts/ResetPasswordStatus';
 
-import HomeScreen from '../src/views/Home/HomeScreen';
-import ControlRoom from '../src/views/Home/ControlRoom';
-import WMS from '../src/views/Home/WMS';
-
-import BusinessUnit from '../src/views/BusinessUnit/BusinessUnit';
-
-import AddBusinessUnit from '../src/views/BusinessUnit/AddBusinessUnit';
+import purchaseRequest from '../src/views/PurchaseRequest/purchaseRequest';
+import addEditPurchaseRequest from '../src/views/PurchaseRequest/addEditPurchaseRequest';
 
 
 import configureStore, { history } from './store';
 
-import BusinessUnitRoutes from '../src/subRoutes/business_unit';
 
 import HomeRoutes from '../src/subRoutes/home';
 
@@ -113,6 +107,11 @@ const MainApp = () => {
             {/* <SecuredRoute path="/admin" component={Admin} /> */}
 
             <SecuredRoute exact path="/home" component={HomeRoutes} />
+
+            
+            {/* <Route path="/pr" component={purchaseRequest} /> */}
+            {/* <Route path="/pr/add" component={addEditPurchaseRequest} /> */}
+
 
             <Route path="/login" component={Login} />
 

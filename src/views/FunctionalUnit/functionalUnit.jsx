@@ -180,7 +180,7 @@ export default function FunctionalUnit(props) {
         overflowY: 'scroll'
       }}
     >
-      <div style={{ alignItems: 'center', flex: 1, display: 'flex' }}>
+      <div style={{ alignItems: 'center', flex: 1, display: 'flex', marginTop:5 }}>
         <Header />
       </div>
 
